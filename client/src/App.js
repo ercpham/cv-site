@@ -51,7 +51,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <p>{response}</p>
+      {/* <p>{response}</p>
       <form onSubmit={handleSubmit}>
         <p>
           <strong>Post to Server:</strong>
@@ -63,7 +63,7 @@ function App() {
         />
         <button type="submit">Submit</button>
       </form>
-      <p>{responseToPost}</p>
+      <p>{responseToPost}</p> */}
     </div>
   );
 }
