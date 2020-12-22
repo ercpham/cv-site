@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
   const [response, setResponse] = useState('');
   const [post, setPost] = useState('');
   const [responseToPost, setResponseToPost] = useState('');
+  const items = ["Home", "About Me", "Contact"];
 
   useEffect(() => {
     callApi()
@@ -36,36 +44,48 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      {/* <p>{response}</p>
-      <form onSubmit={handleSubmit}>
-        <p>
-          <strong>Post to Server:</strong>
-        </p>
-        <input
-          type="text"
-          value={post}
-          onChange={e => setPost(e.target.value)}
-        />
-        <button type="submit">Submit</button>
-      </form>
-      <p>{responseToPost}</p> */}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar items={items} />
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        {/* <p>{response}</p>
+        <form onSubmit={handleSubmit}>
+          <p>
+            <strong>Post to Server:</strong>
+          </p>
+          <input
+            type="text"
+            value={post}
+            onChange={e => setPost(e.target.value)}
+          />
+          <button type="submit">Submit</button>
+        </form>
+        <p>{responseToPost}</p> */}
+      </div>
+    </Router>
   );
+}
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Contact() {
+  return <h2>Contact</h2>;
 }
 
 export default App;
