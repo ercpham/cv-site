@@ -5,9 +5,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import Home from './components/Home'
+import Contact from './components/Contact'
 
 function App() {
   const [response, setResponse] = useState('');
@@ -76,16 +77,8 @@ function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
 function About() {
   return <h2>About</h2>;
-}
-
-function Contact() {
-  return <h2>Contact</h2>;
 }
 
 export default App;
