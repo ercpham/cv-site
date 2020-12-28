@@ -1,20 +1,25 @@
+* {
+  font-family: 'Arvo', serif; 
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content{
+  padding: 0em 10em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 100s linear;
-  }
+.seal {
+  width: 15%;
+}
+
+.padding {
+  height: 4em;
 }
 
 .NavBar {
-  background-color: #010a1b;
+  background-color: #000000;
   color: white;
   height: 8vh;
   display: flex;
@@ -27,15 +32,21 @@ a {
   text-decoration: none;
 }
 a:hover {
-   color: rgb(161, 161, 161)
+   color: rgb(161, 161, 161);
 }
-
+.selected {
+   color: rgb(161, 161, 161);
+}
 .pfp {
   max-width:20%;
   height:auto;
   border-radius: 50%;
   margin-top: 2em;
   box-shadow: 0px 0px 1em;
+}
+
+hr {
+  width: 80%;
 }
 
 .NavBar > div {
@@ -52,17 +63,4 @@ a:hover {
   font-size: calc(10px + 2vmin);
   color: white;
   height: 100vh;
-}
-
-.App-link {
-  color: #159fc5;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
