@@ -1,6 +1,6 @@
 import React from "react";
-import pfp from "../profilepic.jpg";
-import seal from "../UCSDSeal.png";
+import pfp from "../img/profilepic.jpg";
+import seal from "../img/UCSDSeal.png";
 
 const Home = (props) => {
   return (
