@@ -2,6 +2,7 @@ import React from "react";
 import calculator from "../img/calculator.jpg";
 import ttt from "../img/ttt.jpg";
 import etchsketch from "../img/etchsketch.jpg";
+import breakout from "../img/breakout.jpg";
 
 const Projects = (props) => {
   return (
@@ -38,7 +39,15 @@ const Projects = (props) => {
             <img src={etchsketch} alt="Etch-a-Sketch" />
           </a>
         </div>
-        <div className="project"></div>
+        <div className="project">
+          <p> Breakout Game </p>
+          <a 
+           href = "https://ercpham.github.io/breakout_tutorial/"
+           target = "_blank"
+           rel="noopener noreferrer">
+             <img src={breakout} alt="Breakout" />
+           </a>
+        </div>
         <div className="project"></div>
         <div className="project"></div>
       </div>
