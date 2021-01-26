@@ -6,7 +6,7 @@ import breakout from "../img/breakout.jpg";
 
 const Projects = (props) => {
   return (
-    <div>
+    <div className = "fade">
       <h2>Projects</h2>
       <div className="projectGrid">
         <div className="project">
